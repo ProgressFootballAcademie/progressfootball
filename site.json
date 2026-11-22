@@ -1,0 +1,53 @@
+{
+  "hero_titre": "Révéler les talents du football togolais, dans un cadre officiel.",
+  "hero_texte": "Progress Football Académie est une académie agréée par la Fédération Togolaise de Football. Nous enregistrons officiellement nos joueurs et nous sommes basés à Lomé.",
+  "qui_1": "Progress Football Académie est une académie de football basée à Lomé, au Togo. Nous repérons de jeunes joueurs à fort potentiel, nous les enregistrons officiellement grâce à notre agrément de la Fédération Togolaise de Football, via la plateforme FIFA, puis nous les accompagnons dans leur parcours, notamment vers le championnat professionnel de première division du Togo.",
+  "qui_2": "Les entraînements ont lieu à Lomé et les jeunes restent vivre dans leurs familles. Notre priorité est de donner à chaque talent un statut clair et reconnu, pour qu'il puisse progresser en toute légitimité.",
+  "mot": "Le football togolais regorge de talents. Trop souvent, ces jeunes restent dans l'ombre faute d'un cadre officiel pour les accompagner. C'est de ce constat qu'est née Progress Football Académie.\n\nNotre ambition est simple : donner à chaque joueur que nous détectons un statut clair et reconnu, grâce à l'agrément de la Fédération Togolaise de Football, et lui permettre de progresser dans de bonnes conditions, auprès de ses proches.\n\nNous avançons avec méthode, à notre rythme. Nous croyons que la confiance se construit par la transparence, avec les familles, avec les clubs et avec les institutions. Ce site est une première étape pour vous présenter qui nous sommes et ce que nous faisons.\n\nParents, joueurs, clubs, partenaires : si notre démarche vous parle, écrivez-nous. Nous serons heureux d'échanger avec vous.",
+  "equipe": [
+    {
+      "nom": "Soumaïla Ousmane",
+      "role": "Directeur Stratégie et Communication"
+    },
+    {
+      "nom": "Latifa Issifou",
+      "role": "Secrétaire générale, relations institutionnelles"
+    },
+    {
+      "nom": "Razak",
+      "role": "Scout"
+    }
+  ],
+  "contacts": [
+    {
+      "label": "Adresse",
+      "valeur": "Progress Football Académie\nKégué, Rue Jean Paul II\nLomé, Togo",
+      "type": "texte",
+      "pays": "aucun"
+    },
+    {
+      "label": "Courriel",
+      "valeur": "contact@progressfootball.com",
+      "type": "mail",
+      "pays": "aucun"
+    },
+    {
+      "label": "Direction, stratégie et communication (France)",
+      "valeur": "+33 7 51 46 85 39",
+      "type": "tel",
+      "pays": "france"
+    },
+    {
+      "label": "Scout, Lomé",
+      "valeur": "+228 90 69 48 90",
+      "type": "tel",
+      "pays": "togo"
+    }
+  ],
+  "reseaux": {
+    "youtube": "https://www.youtube.com/@A-REMPLACER",
+    "facebook": "https://www.facebook.com/A-REMPLACER",
+    "instagram": "https://www.instagram.com/A-REMPLACER",
+    "tiktok": "https://www.tiktok.com/@A-REMPLACER"
+  }
+}
