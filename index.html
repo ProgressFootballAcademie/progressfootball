@@ -1,3 +1,289 @@
-<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Gestion du site</title></head>
-<body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress Football Académie | Lomé, Togo</title>
+<meta name="description" content="Progress Football Académie, structure agréée par la Fédération Togolaise de Football, basée à Lomé. Détection, enregistrement officiel et accompagnement de jeunes talents.">
+<meta property="og:title" content="Progress Football Académie">
+<meta property="og:description" content="Détection, enregistrement officiel et accompagnement de jeunes talents du football togolais.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 2h26v14q0 9-13 14Q3 25 3 16z' fill='%2317382F' stroke='%23C08A4A' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#17382F;--deep:#0E2A22;--bronze:#C08A4A;--orange:#F5A623;--paper:#F4F6F4;--ink:#16211D;--muted:#55645E;--line:#D9E0DC;--head:'Sora','Segoe UI',Arial,sans-serif;--body:'Source Sans 3','Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--body);font-size:18px;line-height:1.65;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:var(--head);line-height:1.2;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+header{position:sticky;top:0;z-index:10;background:var(--forest);color:#fff;border-bottom:3px solid var(--bronze)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;font-family:var(--head);font-weight:700;font-size:1rem}
+.brand img{height:44px;width:auto}
+nav{display:flex;align-items:center;gap:1.5rem;font-size:.98rem}
+nav a{text-decoration:none;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:6px;background:var(--orange);color:var(--deep);font-weight:600;text-decoration:none;border:2px solid var(--orange)}
+.btn:hover{background:#ffb94a;border-color:#ffb94a}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+nav .btn{padding:.5rem 1rem}
+.hero{position:relative;overflow:hidden;background:var(--forest);color:#fff;padding:4.5rem 0 5rem}
+.hero::before{content:"";position:absolute;inset:0 0 0 auto;width:55%;background:repeating-linear-gradient(90deg,rgba(192,138,74,.16) 0 30px,transparent 30px 90px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:700;letter-spacing:-.01em}
+.hero p{max-width:34rem;font-size:1.12rem;color:#D8E4DE;margin:1.25rem 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.hero .logo{justify-self:center;width:min(250px,60vw);height:auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.35))}
+section{padding:4.5rem 0}
+h2{font-size:clamp(1.55rem,3vw,2.1rem);font-weight:700;margin-bottom:1.5rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.about p{margin:0 0 1rem;max-width:38rem}
+.facts{margin:0;padding:1.5rem;background:#fff;border:1px solid var(--line);border-left:4px solid var(--bronze);border-radius:6px;display:grid;gap:1rem;align-content:start}
+.facts div{display:grid;gap:.1rem}
+.facts dt{font-size:.9rem;color:var(--muted)}
+.facts dd{margin:0;font-weight:600}
+.do{background:#fff;border-block:1px solid var(--line)}
+.do ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.do li{border-top:4px solid var(--bronze);padding-top:1rem}
+.do h3{font-size:1.2rem;margin-bottom:.5rem}
+.do p{margin:0;color:var(--muted)}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:800px}
+.person{text-align:left}
+.avatar{width:100%;aspect-ratio:1;border-radius:6px;background:var(--forest);display:grid;place-items:center;color:var(--bronze);font-family:var(--head);font-size:2.4rem;font-weight:700;margin-bottom:.9rem;border-bottom:4px solid var(--bronze)}
+.person h3{font-size:1.1rem}
+.person p{margin:.2rem 0 0;color:var(--muted);font-size:.98rem}
+.word blockquote{margin:0;max-width:44rem;padding-left:1.5rem;border-left:4px solid var(--bronze)}
+.word p{margin:0 0 1rem}
+.word cite{display:block;font-style:normal;font-weight:600;margin-top:1.5rem}
+.word cite span{display:block;font-weight:400;color:var(--muted);font-size:.96rem}
+.media{background:var(--forest);color:#fff}
+.media p{max-width:36rem;color:#D8E4DE;margin:0 0 1.5rem}
+.links{display:flex;flex-wrap:wrap;gap:.8rem}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem}
+address{font-style:normal;display:grid;gap:1rem}
+address b{display:block;font-size:.9rem;font-weight:400;color:var(--muted)}
+.flag{width:20px;height:14px;vertical-align:-2px;margin-right:.45rem;border:1px solid var(--line)}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.98rem}
+input,textarea{font:inherit;padding:.8rem 1rem;border:1px solid #B9C5BF;border-radius:6px;background:#fff;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+form .btn{justify-self:start;cursor:pointer;font:inherit;font-weight:600}
+footer{background:var(--deep);color:#B9CBC3;padding:2rem 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem}
+.hp{position:absolute;left:-9999px}
+@media (max-width:860px){
+nav a:not(.btn){display:none}
+.hero .wrap,.about,.contact{grid-template-columns:1fr;gap:2rem}
+.hero .logo{grid-row:1;width:150px}
+.hero{padding:3rem 0 3.5rem}
+.do ul{grid-template-columns:1fr}
+section{padding:3.5rem 0}
+}
+.avatar{overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}
+address div{white-space:pre-line}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.tabs button{font:inherit;padding:.45rem 1rem;border:1px solid #B9C5BF;background:#fff;border-radius:99px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--forest);color:#fff;border-color:var(--forest)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;padding-bottom:1.25rem}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.card>*:not(img){margin-inline:1.25rem}
+.tag{display:inline-block;margin-top:1rem;font-size:.85rem;font-weight:600;color:var(--forest);border-bottom:2px solid var(--bronze)}
+.card time{display:block;color:var(--muted);font-size:.92rem;margin-top:.5rem}
+.card h3{font-size:1.15rem;margin-top:.3rem}
+.card p{margin-top:.5rem;white-space:pre-line}
+.more{margin-top:1.5rem;cursor:pointer;font:inherit;font-weight:600}
+.ev{display:grid;grid-template-columns:210px 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.ev time{font-weight:600;color:var(--forest)}
+.ev h3{font-size:1.1rem}
+.ev p{margin:.25rem 0 0;color:var(--muted);white-space:pre-line}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.photos figure{margin:0}
+.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
+.photos figcaption{font-size:.92rem;color:var(--muted);margin-top:.4rem}
+.muted{color:var(--muted)}
+@media (max-width:860px){.ev{grid-template-columns:1fr;gap:.25rem}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap bar">
+<a class="brand" href="#accueil" aria-label="Progress Football Académie, accueil">
+<img src="/images/logo.png" alt="" height="44">
+<span>Progress Football Académie</span>
+</a>
+<nav aria-label="Navigation principale">
+<a href="#academie">L'académie</a>
+<a href="#equipe">Équipe</a>
+<a href="#actualites" hidden>Actualités</a>
+<a href="#calendrier" hidden>Calendrier</a>
+<a href="#photos" hidden>Photos</a>
+<a href="#medias">Vidéos</a>
+<a class="btn" href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="hero" id="accueil">
+<div class="wrap">
+<div>
+<h1 data-k="hero_titre">Révéler les talents du football togolais, dans un cadre officiel.</h1>
+<p data-k="hero_texte">Progress Football Académie est une académie agréée par la Fédération Togolaise de Football. Nous enregistrons officiellement nos joueurs et nous sommes basés à Lomé.</p>
+<div class="cta">
+<a class="btn" href="#contact">Nous contacter</a>
+<a class="btn ghost" href="#equipe">Découvrir l'équipe</a>
+</div>
+</div>
+<img class="logo" src="/images/logo.png" alt="Logo Progress Football Académie">
+</div>
+</div>
+
+<section id="academie">
+<div class="wrap about">
+<div>
+<h2>Qui sommes-nous</h2>
+<p data-k="qui_1">Progress Football Académie est une académie de football basée à Lomé, au Togo. Nous repérons de jeunes joueurs à fort potentiel, nous les enregistrons officiellement grâce à notre agrément de la Fédération Togolaise de Football, via la plateforme FIFA, puis nous les accompagnons dans leur parcours, notamment vers le championnat professionnel de première division du Togo.</p>
+<p data-k="qui_2">Les entraînements ont lieu à Lomé et les jeunes restent vivre dans leurs familles. Notre priorité est de donner à chaque talent un statut clair et reconnu, pour qu'il puisse progresser en toute légitimité.</p>
+</div>
+<dl class="facts">
+<div><dt>Statut</dt><dd>Académie agréée par la FTF</dd></div>
+<div><dt>Enregistrement des joueurs</dt><dd>Via la plateforme FIFA</dd></div>
+<div><dt>Localisation</dt><dd>Kégué, Lomé, Togo</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="do" aria-labelledby="faisons">
+<div class="wrap">
+<h2 id="faisons">Ce que nous faisons</h2>
+<ul>
+<li><h3>Détecter</h3><p>Notre scout détecte les talents de Lomé à Cinkassé, et au-delà.</p></li>
+<li><h3>Enregistrer</h3><p>Chaque joueur est inscrit officiellement sur la plateforme FIFA, grâce à notre agrément FTF.</p></li>
+<li><h3>Accompagner</h3><p>Nous plaçons des jeunes dans le championnat professionnel de première division du Togo et les orientons vers d'autres opportunités adaptées à leur niveau.</p></li>
+</ul>
+</div>
+</section>
+
+<section class="word" id="mot" aria-labelledby="mot-titre">
+<div class="wrap">
+<h2 id="mot-titre">Le mot du directeur</h2>
+<blockquote>
+<p>Le football togolais regorge de talents. Trop souvent, ces jeunes restent dans l'ombre faute d'un cadre officiel pour les accompagner. C'est de ce constat qu'est née Progress Football Académie.</p>
+<p>Notre ambition est simple : donner à chaque joueur que nous détectons un statut clair et reconnu, grâce à l'agrément de la Fédération Togolaise de Football, et lui permettre de progresser dans de bonnes conditions, auprès de ses proches.</p>
+<p>Nous avançons avec méthode, à notre rythme. Nous croyons que la confiance se construit par la transparence, avec les familles, avec les clubs et avec les institutions. Ce site est une première étape pour vous présenter qui nous sommes et ce que nous faisons.</p>
+<p>Parents, joueurs, clubs, partenaires : si notre démarche vous parle, écrivez-nous. Nous serons heureux d'échanger avec vous.</p>
+<cite>Soumaïla Ousmane<span>Directeur Stratégie et Communication</span></cite>
+</blockquote>
+</div>
+</section>
+
+<section id="equipe">
+<div class="wrap">
+<h2>L'équipe</h2>
+<div class="team">
+<div class="person"><div class="avatar" aria-hidden="true">SO</div><h3>Soumaïla Ousmane</h3><p>Directeur Stratégie et Communication</p></div>
+<div class="person"><div class="avatar" aria-hidden="true">LI</div><h3>Latifa Issifou</h3><p>Secrétaire générale, relations institutionnelles</p></div>
+<div class="person"><div class="avatar" aria-hidden="true">R</div><h3>Razak</h3><p>Scout</p></div>
+</div>
+</div>
+</section>
+
+<section id="actualites" hidden>
+<div class="wrap"><h2>Actualités</h2>
+<div id="news-tabs" class="tabs"></div>
+<div id="news-list" class="grid"></div>
+<button id="news-more" class="btn more" type="button" hidden>Voir plus</button>
+</div>
+</section>
+
+<section class="do" id="calendrier" hidden>
+<div class="wrap"><h2>Calendrier</h2><div id="cal-list"></div></div>
+</section>
+
+<section id="photos" hidden>
+<div class="wrap"><h2>Photothèque</h2><div id="photo-grid" class="photos"></div></div>
+</section>
+
+<section class="media" id="medias">
+<div class="wrap">
+<h2>Suivez-nous</h2>
+<p>Retrouvez nos entraînements, nos joueurs et nos actualités sur notre chaîne YouTube et nos réseaux sociaux.</p>
+<div class="links">
+<a class="btn" href="https://www.youtube.com/@A-REMPLACER" data-h="youtube" target="_blank" rel="noopener">Chaîne YouTube</a>
+<a class="btn ghost" href="https://www.facebook.com/A-REMPLACER" data-h="facebook" target="_blank" rel="noopener">Facebook</a>
+<a class="btn ghost" href="https://www.instagram.com/A-REMPLACER" data-h="instagram" target="_blank" rel="noopener">Instagram</a>
+<a class="btn ghost" href="https://www.tiktok.com/@A-REMPLACER" data-h="tiktok" target="_blank" rel="noopener">TikTok</a>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap contact">
+<div>
+<h2>Contact</h2>
+<address>
+<div><b>Adresse</b>Progress Football Académie<br>Kégué, Rue Jean Paul II<br>Lomé, Togo</div>
+<div><b>Courriel</b><a href="mailto:contact@progressfootball.com">contact@progressfootball.com</a></div>
+<div><b>Direction, stratégie et communication (France)</b><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg><a href="tel:+33751468539">+33 (0)7 51 46 85 39</a></div>
+<div><b>Scout, Lomé</b><svg class="flag" viewBox="0 0 162 100" aria-hidden="true"><rect width="162" height="100" fill="#FFCE00"/><rect width="162" height="20" fill="#006A4E"/><rect y="40" width="162" height="20" fill="#006A4E"/><rect y="80" width="162" height="20" fill="#006A4E"/><rect width="60" height="60" fill="#D21034"/><polygon points="30,12 40.6,44.6 12.9,24.4 47.1,24.4 19.4,44.6" fill="#fff"/></svg><a href="tel:+22890694890">+228 90 69 48 90</a></div>
+</address>
+</div>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact">
+<p class="hp"><label>Ne pas remplir : <input name="bot-field"></label></p>
+<label>Nom<input type="text" name="nom" autocomplete="name" required></label>
+<label>Courriel<input type="email" name="email" autocomplete="email" required></label>
+<label>Message<textarea name="message" required></textarea></label>
+<button class="btn" type="submit">Envoyer le message</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span>© 2026 Progress Football Académie, Lomé, Togo</span>
+<span>Structure agréée par la Fédération Togolaise de Football</span>
+</div>
+</footer>
+
+<script>
+(async()=>{
+const $=s=>document.querySelector(s),E=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const j=async u=>{try{const r=await fetch(u);return r.ok?await r.json():null}catch(e){return null}};
+const fd=s=>new Date(s+'T12:00:00').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
+const by=(a,b)=>(b.date||'').localeCompare(a.date||'');
+const show=id=>{const s=$('#'+id);if(s)s.hidden=false;const a=$('nav a[href="#'+id+'"]');if(a)a.hidden=false};
+const FL={france:'<svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>',togo:'<svg class="flag" viewBox="0 0 162 100" aria-hidden="true"><rect width="162" height="100" fill="#FFCE00"/><rect width="162" height="20" fill="#006A4E"/><rect y="40" width="162" height="20" fill="#006A4E"/><rect y="80" width="162" height="20" fill="#006A4E"/><rect width="60" height="60" fill="#D21034"/><polygon points="30,12 40.6,44.6 12.9,24.4 47.1,24.4 19.4,44.6" fill="#fff"/></svg>'};
+const d=await j('/content/site.json');
+if(d){
+document.querySelectorAll('[data-k]').forEach(e=>{if(d[e.dataset.k])e.textContent=d[e.dataset.k]});
+const r=d.reseaux||{};document.querySelectorAll('[data-h]').forEach(e=>{if(r[e.dataset.h])e.href=r[e.dataset.h]});
+if(d.mot){const q=$('.word blockquote'),c=q.querySelector('cite');q.querySelectorAll('p').forEach(p=>p.remove());d.mot.split(/\n\s*\n/).forEach(t=>q.insertBefore(E('p',0,t.trim()),c))}
+if(d.equipe&&d.equipe.length){const t=$('.team');t.textContent='';d.equipe.forEach(m=>{const p=E('div','person'),a=E('div','avatar');if(m.photo){const i=E('img');i.src=m.photo;i.alt=m.nom;a.appendChild(i)}else a.textContent=m.nom.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();p.append(a,E('h3',0,m.nom),E('p',0,m.role));t.appendChild(p)})}
+if(d.contacts&&d.contacts.length){const a=$('address');a.textContent='';d.contacts.forEach(c=>{const x=E('div');x.appendChild(E('b',0,c.label));if(FL[c.pays])x.insertAdjacentHTML('beforeend',FL[c.pays]);if(c.type==='tel'||c.type==='mail'){const l=E('a',0,c.valeur);l.href=c.type==='tel'?'tel:'+c.valeur.replace(/[^+\d]/g,''):'mailto:'+c.valeur;x.appendChild(l)}else x.append(c.valeur);a.appendChild(x)})}
+}
+const A=await j('/content/actualites.json'),N=((A&&A.items)||[]).sort(by);
+if(N.length){show('actualites');let f='',n=6;const L=$('#news-list'),B=$('#news-more'),T=$('#news-tabs');
+const draw=()=>{L.textContent='';const v=N.filter(i=>!f||i.rubrique===f);v.slice(0,n).forEach(i=>{const c=E('article','card');if(i.image){const m=E('img');m.src=i.image;m.alt='';m.loading='lazy';c.appendChild(m)}if(i.rubrique)c.appendChild(E('span','tag',i.rubrique));c.append(E('time',0,i.date?fd(i.date):''),E('h3',0,i.titre),E('p',0,i.texte));L.appendChild(c)});B.hidden=v.length<=n;T.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===f)))};
+[['','Toutes'],['Actualités générales','Actualités générales'],['Nos joueurs','Nos joueurs']].forEach(([v,t])=>{const b=E('button',0,t);b.dataset.f=v;b.onclick=()=>{f=v;n=6;draw()};T.appendChild(b)});
+B.onclick=()=>{n+=6;draw()};draw()}
+const V=await j('/content/evenements.json'),ev=(V&&V.items)||[];
+if(ev.length){show('calendrier');const t=new Date().toISOString().slice(0,10),up=ev.filter(e=>(e.date||'')>=t).sort((a,b)=>a.date.localeCompare(b.date)),L=$('#cal-list');
+if(!up.length)L.appendChild(E('p','muted','Aucun événement programmé pour le moment.'));
+up.forEach(e=>{const r=E('div','ev'),b=E('div');b.append(E('h3',0,e.titre+(e.type?' ('+e.type+')':'')));if(e.lieu)b.append(E('p',0,e.lieu));if(e.description)b.append(E('p',0,e.description));r.append(E('time',0,fd(e.date)),b);L.appendChild(r)})}
+const P=await j('/content/photos.json'),ph=((P&&P.items)||[]).sort(by);
+if(ph.length){show('photos');const g=$('#photo-grid');ph.forEach(p=>{const f=E('figure'),a=E('a'),i=E('img');a.href=p.image;a.target='_blank';a.rel='noopener';i.src=p.image;i.alt=p.occasion||'';i.loading='lazy';a.appendChild(i);f.append(a,E('figcaption',0,(p.date?fd(p.date)+' · ':'')+(p.occasion||'')));g.appendChild(f)})}
+})();
+</script>
+</body>
+</html>
